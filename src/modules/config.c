@@ -33,7 +33,7 @@ void (*protocol_functions[][3])(void) = {
 void config_init(void) {
 	struct Config init_config = {
 			.version					= 0x01,
-			.protocol					= DSM_MITM,
+			.protocol					= DSM_TRANSMITTER,
 			.protocol_start 			= true,
 			.debug_enable 				= false,
 			.debug_button				= true,
@@ -41,11 +41,11 @@ void config_init(void) {
 			.debug_dsm					= false,
 			.debug_protocol				= true,
 			.timer_scaler				= 1,
-			.dsm_start_bind				= true,
+			.dsm_start_bind				= false,
 			.dsm_max_channel			= DSM_MAX_CHANNEL,
 			.dsm_bind_channel			= -1,
 			.dsm_bind_mfg_id			= {0x0, 0x0, 0x0, 0x0},
-			.dsm_protocol				= 0xA2,
+			.dsm_protocol				= 0x01,
 			.dsm_num_channels			= 6,
 			.dsm_force_dsm2				= true,
 			.dsm_max_missed_packets 	= 3,
